@@ -8,6 +8,11 @@ function init() {
   let button = document.querySelector("button");
   let pressButton = function() {
     audio.play();
+    if(select.value == "party-horn") {
+      const canvas = document.querySelector("body");
+      const jsConfetti = new JSConfetti(canvas);
+      jsConfetti.addConfetti();
+    }
   }
   let changeSound = function() {
     if(scale.value == 0) {
